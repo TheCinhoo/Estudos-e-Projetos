@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="../GAM/application/assets/css/estilos.css" rel="stylesheet">
+  <link href="assets/css/estilos.css" rel="stylesheet">
 </head>
 
 <body cz-shortcut-listen="true">
