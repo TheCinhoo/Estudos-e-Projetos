@@ -1,0 +1,30 @@
+footer{
+	padding-top: 10px;
+	border: 1px solid #DDD;
+	background: #F4F3F2;
+}
+
+.conteudo{
+	min-height: 300px;
+}
+
+.logo{
+	margin: -5px;
+	max-width: 110px;
+	height: auto;
+}
+
+.cabeca{
+	margin-top: 50.5px;
+	width: 100%;
+	height: auto; 
+}
+
+.container{
+	width: 900px;
+}
+
+.center{
+	display: block;
+	margin: auto;
+}

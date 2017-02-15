@@ -1,0 +1,41 @@
+body{
+  background-color: #BCD2EE;
+}
+
+h2{
+  font-weight: bold;
+}
+
+form{
+  padding-top: 20px;
+}
+
+input{
+  box-shadow: 1px 1px 1px #FFF0F5;
+  border-radius: 5px;
+  border-color: #F5F5F5;
+}
+
+.container{
+  background-color: #EEE;
+  text-align: center;
+  margin: 50px auto;
+  padding: auto;
+  border: solid 0.01em #333;
+  width: 450px;
+  padding-bottom: 20px;
+  box-shadow: 4px 4px 4px #888888;
+  border-radius: 10px;
+}
+
+.margin{
+  margin-top: 30px;
+}
+
+.botao{
+  margin-top: 20px;
+}
+
+.while{
+  margin-top: 3px;
+}
