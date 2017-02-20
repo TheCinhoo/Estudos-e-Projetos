@@ -1,0 +1,586 @@
+<style>
+    #form-content {
+        background: #f7f7f7 !important;
+    }
+    
+    #form-content .form-group{
+        background: #fff;
+    }
+    
+    #help-content{
+        display: none;
+    }
+    
+    .space-title{
+        margin-bottom: 15px;
+        font-size: 13px;
+    }
+    
+    .panel-group .panel-heading {
+        background: #f7f7f7;
+    }
+    
+    .panel-group .panel-heading a{
+        color: #000;
+    }
+
+    .form-group h2 i{
+        float: left;
+        margin-right: 15px;
+    }
+    
+    .form-group h2 b{
+        color: #000;
+        line-height: 40px;
+    }
+    
+    .structures h4{
+        text-align: center;
+    }
+    
+    .structures label{
+        display: block;
+        text-align: center;
+    }
+    
+    .structures label:hover,
+    .structures input:hover{
+        cursor: pointer;
+    }
+    
+    .structures img{
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .remove-bg{
+        cursor: pointer;
+    }
+    
+    .row-social .input-group-addon{
+        line-height: 18px;
+        text-align: left;
+        width: 145px;
+    }
+    
+    .row-social .input-group-addon svg{
+        display: inline-block;
+        border-radius: 3px;
+        vertical-align: top;
+    }
+    
+    radio, label{
+        font-size: 1.5rem;
+    }
+</style>
+<script>
+    jQuery(".collapse-title").click(function(){
+        $(this).parents(".panel-heading").siblings(".collapse-content").slideToggle();
+    });
+    
+    (function($){
+        $('.remove-img').click(function(){
+            $(this).parents('.file').find('img').remove();
+            $(this).parents('.file').find(':hidden').val('');
+            return false;
+        });
+    }(jQuery));   
+</script>
+
+<fieldset>
+    <div class="form-group">
+        <input type="hidden" name="class_name">
+        <input type="hidden" name="extension_id">
+        
+        <!-- CORES -->
+        <h2>
+            <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460" width="40" height="40"><path fill="#AAAFAD" d="M460 268.025V401.04c0 11.047-8.954 20-20 20h-73.474l-3.118 3.113c-7.81 7.795-20.476 7.795-28.287 0l-3.11-3.112H20c-11.046 0-20-8.95-20-20V288.03c0-11.045 8.953-20 19.998-20H460z"/><path fill="#979B99" d="M460 268.025V401.04c0 11.047-8.954 20-20 20h-73.474l-3.118 3.113c-7.81 7.795-20.476 7.795-28.287 0l-3.11-3.112H306.9l-68.38-68.38v-42.31l.147.153v-42.47H460z"/><path fill="#C3C9C7" d="M443.543 344.184l-80.136 79.97c-7.81 7.795-20.476 7.795-28.287 0L86.326 175.874c-7.81-7.795-7.81-20.434 0-28.23l80.136-79.97c7.81-7.794 20.476-7.794 28.287 0l248.79 248.28c7.81 7.796 7.81 20.434 0 28.23z"/><path fill="#AAAFAD" d="M443.543 344.184l-80.136 79.97c-7.81 7.795-20.476 7.795-28.287 0L310 399.086l-20-19.96V221.87h59.264l94.28 94.084c7.81 7.796 7.81 20.434 0 28.23z"/><path fill="#D2D6D5" d="M306.667 401.042V270c0-11.046 8.954-20 20-20H440c11.046 0 20 8.954 20 20v131.042c0 11.046-8.954 20-20 20H326.667c-11.046 0-20-8.955-20-20z"/><path fill="#AAAFAD" d="M366.296 378.537c0 9.39-7.612 17.002-17.002 17.002h-.07c-9.39 0-17.002-7.62-17.002-17.01s7.612-17 17.002-17h.07c9.39 0 17.002 7.61 17.002 17z"/><path fill="#66646D" d="M357.778 378.537c0 4.695-3.814 8.5-8.52 8.5s-8.518-3.805-8.518-8.5 3.814-8.5 8.52-8.5 8.518 3.805 8.518 8.5z"/><path fill="#AAAFAD" d="M332.222 297.78c0-2.348 1.903-4.25 4.25-4.25h93.72c2.348 0 4.25 1.902 4.25 4.25 0 2.346-1.902 4.25-4.25 4.25h-93.72c-2.347 0-4.25-1.904-4.25-4.25zm0 17c0-2.347 1.903-4.25 4.25-4.25h93.72c2.348 0 4.25 1.903 4.25 4.25s-1.902 4.25-4.25 4.25h-93.72c-2.347 0-4.25-1.902-4.25-4.25z"/><path fill="#475E70" d="M0 401.042V288.026c0-11.046 8.954-20 20-20h218.52v153.016H20c-11.046 0-20-8.955-20-20z"/><path fill="#344A59" d="M238.52 268.025v84.635l-60-59.63v-25.006h60z"/><path fill="#65849B" d="M0 401.042V288.026c0-11.046 8.954-20 20-20h158.89v153.016H20c-11.046 0-20-8.955-20-20z"/><path fill="#344A59" d="M153.333 314.772v-16.984c0-2.352 1.907-4.26 4.26-4.26 2.35 0 4.258 1.908 4.258 4.26v16.984c0 2.352-1.9 4.26-4.25 4.26s-4.26-1.908-4.26-4.26z"/><path fill="#7FA3BA" d="M0 401.042V288.026c0-11.046 8.954-20 20-20h99.26v153.016H20c-11.046 0-20-8.955-20-20z"/><path fill="#65849B" d="M93.704 314.772v-16.984c0-2.352 1.907-4.26 4.26-4.26 2.35 0 4.258 1.908 4.258 4.26v16.984c0 2.352-1.907 4.26-4.26 4.26-2.35 0-4.258-1.908-4.258-4.26z"/><path fill="#95BDBF" d="M20 421.042c-11.046 0-20-8.954-20-20V288.026c0-11.046 8.954-20 20-20h39.63v153.016H20z"/><path fill="#7FA3BA" d="M34.074 314.772v-16.984c0-2.352 1.907-4.26 4.26-4.26 2.35 0 4.258 1.908 4.258 4.26v16.984c0 2.352-1.907 4.26-4.26 4.26-2.35 0-4.258-1.908-4.258-4.26z"/><path fill="#707F39" d="M349.264 221.87L240.84 330.07 86.327 175.873c-7.81-7.795-7.81-20.434 0-28.23l80.136-79.97c7.81-7.794 20.476-7.794 28.287 0L349.263 221.87z"/><path fill="#84994B" d="M307.1 179.793l-108.424 108.2-42.165-42.078-70.18-70.04c-7.81-7.795-7.81-20.434 0-28.23l80.14-79.97c7.81-7.794 20.476-7.794 28.287 0l70.185 70.04 42.165 42.078z"/><path fill="#AAC06A" d="M238.52 164.077L172.46 230l-15.948 15.914-70.185-70.04c-7.81-7.795-7.81-20.434 0-28.23l80.136-79.97c7.81-7.794 20.476-7.794 28.287 0l70.185 70.04-26.416 26.363z"/><path fill="#C8DD7F" d="M86.326 175.874c-7.81-7.795-7.81-20.434 0-28.23l80.136-79.97c7.81-7.794 20.476-7.794 28.287 0l28.02 27.964-108.43 108.2-28.02-27.964z"/><path fill="#707F39" d="M255.9 194.82l12.048-12.023c1.664-1.66 4.357-1.66 6.02 0 1.664 1.66 1.664 4.354 0 6.014l-12.046 12.03c-1.664 1.66-4.357 1.66-6.02 0-1.664-1.66-1.664-4.353 0-6.013z"/><path fill="#84994B" d="M213.736 152.742l12.047-12.022c1.664-1.66 4.357-1.66 6.02 0 1.664 1.66 1.664 4.354 0 6.014l-12.046 12.022c-1.664 1.66-4.357 1.66-6.02 0-1.664-1.66-1.664-4.355 0-6.014z"/><path fill="#AAC06A" d="M171.572 110.665l12.047-12.022c1.66-1.66 4.35-1.66 6.02 0 1.66 1.66 1.66 4.354 0 6.014l-12.05 12.023c-1.67 1.66-4.36 1.66-6.02 0-1.67-1.66-1.67-4.357 0-6.016z"/><path fill="#515B28" d="M307.1 179.793l42.164 42.077-9.264 9.245-50 49.897v-84.155l17.1-17.064z"/><path fill="#AA3131" d="M326.667 60H440c11.046 0 20 8.954 20 20v188.025H306.667V80c0-11.046 8.954-20 20-20z"/><path fill="#C93F3F" d="M326.667 50H440c11.046 0 20 8.954 20 20v138.52H306.667V70c0-11.046 8.954-20 20-20z"/><path fill="#E25C56" d="M326.667 50H440c11.046 0 20 8.954 20 20v79.013H306.667V70c0-11.046 8.954-20 20-20z"/><path fill="#FF9292" d="M306.667 50c0-11.046 8.954-20 20-20H440c11.046 0 20 8.954 20 20v39.506H306.667V50z"/><path fill="#6C3131" d="M413.14 242.523h17.054c2.347 0 4.25 1.903 4.25 4.25s-1.903 4.25-4.25 4.25H413.14c-2.348 0-4.25-1.903-4.25-4.25s1.902-4.25 4.25-4.25z"/><path fill="#AA3131" d="M413.14 183.016h17.054c2.347 0 4.25 1.903 4.25 4.25s-1.903 4.25-4.25 4.25H413.14c-2.348 0-4.25-1.903-4.25-4.25s1.902-4.25 4.25-4.25z"/><path fill="#C93F3F" d="M413.14 123.51h17.054c2.347 0 4.25 1.903 4.25 4.25s-1.903 4.25-4.25 4.25H413.14c-2.348 0-4.25-1.903-4.25-4.25s1.902-4.25 4.25-4.25z"/><path fill="#E25C56" d="M413.14 64.004h17.054c2.347 0 4.25 1.903 4.25 4.25s-1.903 4.25-4.25 4.25H413.14c-2.348 0-4.25-1.903-4.25-4.25s1.902-4.25 4.25-4.25z"/></svg></i>
+            Cores & Layout
+        </h2>
+        <p>Personalize as cores da sua loja</p>
+        <hr>
+        
+        <!-- TOPO -->
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="collapse-custom">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a href="javascript:void(0)" class="collapse-title">Topo</a>
+                        </h4>
+                    </div>
+                    <div class="collapse-content panel-body" style="display: none;"> 
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Link's superiores</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_1" id="color_tone_1" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- MOBILE -->
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="collapse-custom">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a href="javascript:void(0)" class="collapse-title">Mobile</a>
+                        </h4>
+                    </div>
+                    <div class="collapse-content panel-body" style="display: none;"> 
+                        <div class="row">
+                            
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor do header mobile</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_header_mobile" id="color_header_mobile" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Barra do topo</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_16" id="color_tone_16" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Carrinho</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_3" id="color_tone_3" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Atendimento</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_19" id="color_tone_19" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>    
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Bot&atilde;o de busca</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_4" id="color_tone_4" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>    
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- MENU -->
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="collapse-custom">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a href="javascript:void(0)" class="collapse-title">Menu</a>
+                        </h4>
+                    </div>
+                    <div class="collapse-content panel-body" style="display: none;"> 
+                        <div class="row">
+                            
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor de fonte</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_5" id="color_tone_5" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor de fundo</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_18" id="color_tone_18" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor ao passar o mouse</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_6" id="color_tone_6" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor do submenu</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_17" id="color_tone_17" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>    
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor de fonte do submenu</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_23" id="color_tone_23" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>    
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor de fonte do submenu em todas categorias</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_24" id="color_tone_24" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>    
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- VITRINE -->
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="collapse-custom">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a href="javascript:void(0)" class="collapse-title">Vitrine</a>
+                        </h4>
+                    </div>
+                    <div class="collapse-content panel-body" style="display: none;"> 
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor de pre&ccedil;os</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_7" id="color_tone_7" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor de parcelas</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_8" id="color_tone_8" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>  
+        
+        <!-- NEWSLETTER -->
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="collapse-custom">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a href="javascript:void(0)" class="collapse-title">Newslleter</a>
+                        </h4>
+                    </div>
+                    <div class="collapse-content panel-body" style="display: none;"> 
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor da barra</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_9" id="color_tone_9" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor do bot&atilde;o</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_14" id="color_tone_14" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>  
+        
+        <!-- RODAPE -->
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="collapse-custom">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a href="javascript:void(0)" class="collapse-title">Rodap&eacute;</a>
+                        </h4>
+                    </div>
+                    <div class="collapse-content panel-body" style="display: none;"> 
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor dos t&iacute;tulos</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_15" id="color_tone_15" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor dos &iacute;cones</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_20" id="color_tone_20" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor dos textos</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_21" id="color_tone_21" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                            <div class="col-sm-4">
+                                <h4 class="space-title">Cor dos link's e textos</h4>
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_10" id="color_tone_10" placeholder="#252525" class="form-control" type="text">
+                                </div> 
+                            </div>                        
+                        </div> 
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3>Plugin Facebook</h3>
+                                <p>Para gerar o plugin do Facebook acesse este <a href="https://developers.facebook.com/docs/plugins/page-plugin" target="_blank">link</a>, copie o c&oacute;digo <b>iframe</b> gerado e cole no campo abaixo.
+                                De preferência utilizar largura de 260px.
+                                </p>
+                                <textarea name="like_box" id="like_box" class="form-control" rows="5" placeholder="Insira aqui o c&oacute;digo iframe gerado pelo Facebook ..."></textarea>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    
+    <!-- LOGO -->
+    <div class="form-group">
+        <h2>
+            <i><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40"><path fill="#665A4B" d="M181.347 63.523c-4.346-4.346-4.346-11.394 0-15.742 4.346-4.342 11.394-4.342 15.742 0l58.432 58.44 89.52-102.483c4.083-4.594 11.12-5.008 15.713-.925 4.595 4.085 5.01 11.12.925 15.715l-89.52 102.48c-4.056 4.564-9.882 7.284-15.983 7.463-.215.007-.43.01-.646.01-5.875 0-11.583-2.355-15.746-6.52l-58.437-58.434zm219.35 426.216H267.13v-33.395c0-6.147-4.983-11.13-11.13-11.13s-11.13 4.983-11.13 11.13v33.39H111.304c-6.147 0-11.13 4.984-11.13 11.13 0 6.148 4.983 11.13 11.13 11.13h289.39c6.148 0 11.13-4.982 11.13-11.13.002-6.146-4.98-11.13-11.128-11.13z"/><path fill="#494434" d="M467.478 467.478H44.522C19.934 467.478 0 447.545 0 422.958V144.695c0-24.588 19.933-44.522 44.522-44.522h422.956c24.588 0 44.522 19.933 44.522 44.522v278.26c0 24.59-19.934 44.522-44.522 44.522z"/><path fill="#627C78" d="M512 422.957H0v-278.26h512v278.26z"/><path fill="#748C88" d="M378.435 422.957H189.217l89.043-278.26h189.217l-89.042 278.26z"/><path fill="#DDAC5E" d="M384 235.965c0 23.564-19.102 42.666-42.666 42.666-1.34 0-2.667-.07-3.977-.19 2.578 8.14 3.977 16.8 3.977 25.79 0 47.13-38.205 85.338-85.334 85.338s-85.334-38.205-85.334-85.334c0-8.99 1.4-17.652 3.977-25.79-1.31.12-2.636.19-3.977.19-23.564 0-42.666-19.1-42.666-42.665s19.102-42.667 42.666-42.667c21.728 0 39.648 16.245 42.312 37.248 12.634-7.392 27.326-11.647 43.02-11.647s30.388 4.255 43.022 11.647c2.665-21.005 20.585-37.25 42.312-37.25 23.566 0 42.668 19.1 42.668 42.665z"/><path fill="#FFDB80" d="M384 235.965c0 23.564-19.102 42.666-42.666 42.666-1.342 0-2.667-.07-3.977-.19 2.578 8.14 3.977 16.8 3.977 25.79 0 47.13-38.205 85.338-85.334 85.338-19.01 0-36.56-6.222-50.744-16.73l49.25-153.91c.5-.01.994-.027 1.494-.027 15.695 0 30.387 4.256 43.02 11.648 2.666-21.004 20.586-37.248 42.313-37.248 23.565 0 42.667 19.1 42.667 42.665z"/></svg></i>
+            Logo
+        </h2>
+        <p>Escolha a logo para ser exibida em texto ou em imagem</p>
+        <hr>
+        <div class="row">
+            <div class="col-sm-8">
+                <h4 class="space-title">Em imagem</h4>
+                <div class="input-group file">
+                    <span class="input-group-addon">
+                        <input type="radio" name="logo_radio" value="image">
+                    </span>                    
+                    <input type="file" class="form-control" id="logo_image" name="logo_image">
+                    <a class="remove-img btn btn-danger" style="margin-top: 5px;">Remover</a>
+                </div>
+            </div> 
+            <div class="col-sm-4">
+                <h4 class="space-title">Em texto</h4>
+                <div class="input-group" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        <input type="radio" name="logo_radio" value="text">
+                    </span>
+                    <input type="text" class="form-control" name="logo_text" id="logo_text">
+                </div>     
+            </div>     
+            <div class="col-sm-4">
+                <h4 class="space-title">Cor</h4>
+                <div class="input-group colorPicker colorpicker-element">
+                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                    <input name="color_text_logo" id="color_text_logo" placeholder="#252525" class="form-control" type="text">
+                </div> 
+            </div>            
+        </div>        
+        
+    </div>
+    
+    <!-- LINK'S ADICIONAIS -->
+    <div class="form-group">
+        <div class="row">
+            <h2>
+                <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.999 511.999" width="40" height="40"><path fill="#D8DBE2" d="M469.852 42.176c45.377 45.366 45.377 118.928 0 164.305l-95.732 95.75c-12.89 12.89-28.047 22.11-44.19 27.68-24.56 8.465-51.38 8.465-75.94 0-16.147-5.567-31.3-14.784-44.19-27.673-12.878-12.89-22.106-28.042-27.67-44.19l2.034-2.035c-2.037 2.037 35.907-36.645 35.907-36.645L256.03 256c19.806 19.817 52.044 19.817 71.86 0l2.038-2.038 93.707-93.707c19.807-19.807 19.807-52.045 0-71.862-19.818-19.807-52.056-19.807-71.862 0L258.066 182.1l-37.97 15.44-37.968-15.44c5.567-16.135 14.784-31.3 27.673-44.19l95.75-95.732c45.38-45.38 118.94-45.38 164.31-.002z"/><path fill="#A7AFBA" d="M258.067 182.098c16.135 5.567 31.29 14.795 44.18 27.684 12.888 12.878 22.116 28.043 27.683 44.18l-2.037 2.036c-19.818 19.818-52.056 19.818-71.862 0-19.81-19.807-52.05-19.807-71.86 0l-2.03 2.037-93.704 93.707c-19.82 19.818-19.82 52.056 0 71.862 19.807 19.818 52.045 19.818 71.86 0L254 329.897c24.557 8.465 51.38 8.465 75.937 0-5.566 16.146-14.794 31.3-27.683 44.19L206.52 469.83c-45.376 45.37-118.94 45.37-164.316 0-45.365-45.372-45.365-118.934 0-164.31l95.745-95.734c12.89-12.89 28.04-22.117 44.19-27.684 24.55-8.466 51.372-8.466 75.93 0z"/><path fill="#080342" d="M475.635 36.393c-48.49-48.483-127.38-48.485-175.866 0l-95.75 95.743c-12.558 12.554-22.06 27.22-28.29 43.63-15.898 6.043-30.79 15.452-43.57 28.233l-95.74 95.74C12.93 323.22 0 354.45 0 387.67s12.935 64.444 36.423 87.933c24.243 24.242 56.088 36.364 87.932 36.364s63.69-12.126 87.932-36.368l95.743-95.75c12.554-12.556 22.057-27.22 28.29-43.63 15.894-6.04 30.79-15.45 43.573-28.23l95.743-95.746c48.484-48.485 48.484-127.376 0-175.864zm-179.16 331.914L200.73 464.05c-42.115 42.114-110.64 42.114-152.753 0-20.403-20.402-31.637-47.526-31.637-76.377 0-28.852 11.235-55.976 31.636-76.376l95.742-95.743c42.113-42.114 110.637-42.115 152.753 0 4 3.997 7.7 8.323 11.01 12.853 2.66 3.647 7.77 4.446 11.42 1.788 3.648-2.658 4.448-7.77 1.79-11.417-3.8-5.212-8.06-10.185-12.65-14.78-10.59-10.588-22.626-18.862-35.48-24.825l84.997-85c8.04-8.038 18.75-12.466 30.157-12.466 11.406 0 22.114 4.428 30.154 12.467s12.467 18.748 12.467 30.154-4.426 22.114-12.466 30.154l-95.746 95.743c-8.04 8.038-18.748 12.466-30.155 12.466-11.404 0-22.113-4.42-30.15-12.46-23-22.992-60.42-22.992-83.42 0l-95.74 95.74C71.524 357.1 65.4 371.91 65.4 387.68s6.126 30.584 17.252 41.71c11.126 11.126 25.938 17.253 41.71 17.253s30.584-6.125 41.71-17.25l90.213-90.21c11.626 3.46 23.656 5.192 35.688 5.192 7.988 0 15.975-.765 23.843-2.29-5.033 9.603-11.494 18.388-19.334 26.227zM464.078 200.7l-95.744 95.744c-42.112 42.115-110.638 42.112-152.752 0-3.997-3.997-7.7-8.323-11.003-12.852-2.66-3.648-7.77-4.448-11.42-1.79-3.65 2.658-4.45 7.77-1.79 11.417 3.8 5.21 8.06 10.18 12.65 14.78 10.59 10.58 22.622 18.86 35.48 24.82l-85 85c-8.04 8.04-18.75 12.46-30.158 12.46-11.406 0-22.114-4.427-30.154-12.467-8.04-8.038-12.467-18.747-12.467-30.153 0-11.404 4.43-22.112 12.468-30.152l95.744-95.74c16.625-16.628 43.673-16.628 60.3-.01 11.132 11.133 25.945 17.26 41.716 17.26 15.77 0 30.583-6.126 41.71-17.25l95.74-95.744c11.127-11.124 17.254-25.94 17.254-41.71s-6.124-30.582-17.25-41.71c-11.128-11.122-25.94-17.25-41.71-17.25s-30.584 6.127-41.71 17.253l-90.21 90.213c-19.338-5.758-39.81-6.728-59.528-2.905 5.03-9.61 11.49-18.395 19.33-26.23L311.32 47.94c42.11-42.116 110.64-42.116 152.75 0 42.113 42.117 42.113 110.643 0 152.755z"/></svg></i>
+                Link's Adicionais
+            </h2>
+            <p>Escolha os links Adicionais como: Blogs , Noticias etc...</p>
+            <div class="col-sm-4">
+                <select class="form-control" id="exibe_links" name="exibe_links" style="margin-left: 40px;">
+                    <option value="">Selecione</option>
+                    <option value="true">Exibir</option>
+                    <option value="false">Ocultar</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="input-group col-sm-12" style="margin: 5px 0;">
+                    <h4>T&iacute;tulo</h4>
+                    <input type="text" class="form-control" id="titulo_extras" name="titulo_extras" placeholder="Ex.: P&aacute;ginas extras"/>
+                </div>
+
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <h4>Descri&ccedil;&atilde;o do 1&ordm; link</h4>
+                    <input type="text" class="form-control" id="texto_extra_links" name="texto_extra_links" placeholder="Ex.: Not&iacute;cias"/>
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <h4>Link</h4>
+                    <input type="text" class="form-control" id="extra_links" name="extra_links" placeholder="Ex.: www.tray.com.br/noticias"/>
+                </div>  
+                
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <h4>Descri&ccedil;&atilde;o do 2&ordm; link</h4>
+                    <input type="text" class="form-control" id="texto_extra_links2" name="texto_extra_links2"/>
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <h4>Link</h4>
+                    <input type="text" class="form-control" id="extra_links2" name="extra_links2"/>
+                </div>  
+                
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <h4>Descri&ccedil;&atilde;o do 3&ordm; link</h4>
+                    <input type="text" class="form-control" id="texto_extra_links3" name="texto_extra_links3"/>
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <h4>Link</h4>
+                    <input type="text" class="form-control" id="extra_links3" name="extra_links3" />
+                </div>  
+                
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <h4>Descri&ccedil;&atilde;o do 4&ordm; link</h4>
+                    <input type="text" class="form-control" id="texto_extra_links4" name="texto_extra_links4"/>
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <h4>Link</h4>
+                    <input type="text" class="form-control" id="extra_links4" name="extra_links4"/>
+                </div>  
+                
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <h4>Descri&ccedil;&atilde;o do 5&ordm; link</h4>
+                    <input type="text" class="form-control" id="texto_extra_links5" name="texto_extra_links5"/>
+                </div>
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <h4>Link</h4>
+                    <input type="text" class="form-control" id="extra_links5" name="extra_links5"/>
+                </div>                
+            </div>
+        </div>
+    </div>   
+    
+    <!-- FORMAS DE ENTREGA -->
+    <div class="form-group">
+        <div class="row">
+            <h2>
+                <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495.2 495.2" width="40" height="40"><path fill="#D38C0D" d="M325.6 224.4L495.2 126 325.6 28.4l-168.8 99.2"/><g fill="#EFBB67"><path d="M170.4 224.4l168-97.6-168-98.4L0 126.8"/><path d="M416 368.4l-168 98.4-168-98.4v-196L248 74l168 98.4"/></g><path fill="#D38C0D" d="M248 74l168 98.4v196l-168 98.4"/><path fill="#EFBB67" d="M326.4 314.8L495.2 218l-169.6-98.4L156 218"/><path fill="#D38C0D" d="M170.4 316.4l168.8-99.2-168.8-97.6L0 218"/><path fill="#704A0E" d="M248.8 270.8L416 172.4 248.8 74 78.4 172.4"/><path fill="#513307" d="M248.8 270.8L416 172.4 248.8 74"/><path fill="#2D1C05" d="M248.8 270.8l36-21.6-36-20.8-36 20.8"/><path fill="#0DD396" d="M368 379.6l40-23.2v-12.8l-40 23.2m0-10.4l40-23.2v-12.8l-40 23.2m0-10.4l40-23.2v-13.6l-40 24"/></svg></i>
+                Formas de entrega
+            </h2>
+            <p>Escolha a imagem das formas de entrega em que voc&ecirc; trabalha</p>  
+            <div class="col-sm-4">
+                <select class="form-control" id="exibe_envio" name="exibe_envio" style="margin-left: 40px;">
+                    <option value="">Selecione</option>
+                    <option value="true">Exibir</option>
+                    <option value="false">Ocultar</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="input-group file">
+                    <input type="file" class="form-control" id="img_entrega" name="img_entrega">
+                    <a class="remove-img btn btn-danger" style="margin-top: 5px;">Remover</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- REDES SOCIAIS -->
+    <div class="form-group">
+        <div class="row">
+            <h2>
+                <i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 300.003 300.003"><path d="M150 0C67.164 0 0 67.16 0 150c0 82.838 67.163 150.003 150 150.003 82.844 0 150-67.165 150-150.003C300 67.16 232.844 0 150 0zm-28.776 152.124c0 3.208-.59 6.274-1.613 9.132l42.977 20.66c4.943-5.407 12.037-8.82 19.942-8.82 14.936 0 27.045 12.11 27.045 27.046 0 14.94-12.11 27.05-27.046 27.05-14.94 0-27.05-12.11-27.05-27.05 0-1.432.145-2.827.36-4.197l-45.738-21.99c-4.47 3.264-9.96 5.217-15.924 5.217-14.937 0-27.046-12.107-27.046-27.046 0-14.94 12.11-27.046 27.045-27.046 5.963 0 11.456 1.95 15.927 5.218l45.74-21.99c-.216-1.37-.362-2.766-.362-4.198 0-14.94 12.11-27.05 27.05-27.05 14.936 0 27.045 12.11 27.045 27.05 0 14.937-12.11 27.046-27.046 27.046-7.91 0-15-3.413-19.946-8.824l-42.97 20.66c1.024 2.858 1.61 5.924 1.61 9.132z" fill="#25b7d3"/></svg></i>
+                Redes Sociais
+            </h2>
+            <p>Insira o link referente ao perfil da sua loja nas redes sociais.</p>
+            <div class="col-sm-4">
+                <select class="form-control" id="exibe_social" name="exibe_social" style="margin-left: 40px;">
+                    <option value="">Selecione</option>
+                    <option value="true">Exibir</option>
+                    <option value="false">Ocultar</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <!--YOUTUBE-->
+                    <span class="input-group-addon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18.136 18.136"><path fill="#D80027" d="M16.28 0H1.856C.83 0 0 .83 0 1.856V16.28c0 1.026.83 1.855 1.855 1.855H16.28c1.025 0 1.856-.828 1.856-1.854V1.86c0-1.03-.83-1.86-1.856-1.86zm-5.833 3.063h.883v2.785c0 .535.017.52.035.586.02.07.083.238.29.238.22 0 .28-.176.298-.25.014-.066.03-.053.03-.61V3.06h.882v4.18h-.894l.02-.21-.27-.113c-.07.14-.15.24-.24.31-.1.068-.21.103-.34.103-.15 0-.27-.033-.37-.098-.09-.063-.15-.14-.19-.24-.044-.11-.073-.23-.084-.346-.012-.136-.02-.415-.02-.83V3.062zM7.38 4.8c0-.435.036-.772.106-1.01.066-.222.183-.396.358-.53.178-.14.413-.208.7-.208.243 0 .452.048.623.138.166.088.294.203.38.338.09.142.152.287.185.433.034.16.05.4.05.73v.74c0 .43-.016.75-.047.94-.03.18-.096.35-.195.51-.1.16-.222.27-.38.34-.16.08-.352.12-.566.12-.244 0-.45-.03-.617-.1-.154-.06-.272-.15-.354-.27-.084-.12-.146-.28-.183-.46-.04-.19-.06-.49-.06-.9v-.8zM5.313 1.575l.718 2.31c.13-.603.37-1.44.56-2.31h.65L6.41 4.87l-.006.027V7.24H5.64V4.898l-.007-.025-.967-3.298h.65zM15.708 14.5c-.114 1.04-1.037 1.893-2.072 1.963-3.048.13-6.087.13-9.134 0-1.036-.07-1.958-.922-2.073-1.962-.12-1.64-.12-3.26 0-4.9.11-1.04 1.03-1.89 2.07-1.96 3.04-.13 6.08-.13 9.13 0 1.03.08 1.96.93 2.07 1.97.11 1.65.11 3.26 0 4.91zM8.58 6.83c.13 0 .23-.077.274-.21.02-.06.046-.177.046-.493v-1.81c0-.367-.02-.485-.043-.552-.045-.136-.144-.215-.273-.215-.127 0-.227.076-.274.21-.024.066-.048.187-.048.556v1.76c0 .347.025.466.047.533.04.14.14.22.27.22zM3.618 9.91h.863v4.85h.91V9.91h.87v-.92H3.62v.92zm4.275 3.195c0 .52-.015.65-.027.705-.03.135-.14.217-.29.217-.146 0-.25-.078-.285-.207-.01-.055-.03-.184-.03-.68v-2.757h-.85v3.004c0 .396.01.66.02.79.02.12.05.237.09.348.05.1.11.177.2.236.09.07.21.09.35.09.12 0 .23-.03.32-.09.1-.06.18-.16.25-.3l.28.07-.01.25h.867v-4.39H7.9v2.72zm3.786-2.5c-.05-.093-.12-.162-.21-.215-.1-.053-.21-.078-.34-.078-.11 0-.21.027-.31.086-.1.062-.19.153-.27.28l-.26.404V8.99h-.85v5.772h.81l.05-.257.07-.358.19.308c.08.138.17.24.27.306.09.07.19.1.29.1.15 0 .27-.05.38-.15.11-.11.18-.23.21-.39.033-.16.05-.43.05-.41v-2.29c0 .01.034-.23-.017-.7-.01-.1-.04-.19-.09-.29zm-.75 2.543c0 .41-.02.535-.04.6-.04.14-.14.223-.28.223s-.24-.07-.28-.21c-.02-.06-.04-.18-.04-.56v-1.16c0-.39.02-.5.04-.56.03-.13.14-.2.27-.2s.23.08.28.22c.02.06.04.19.04.55v1.11zm2.34-.446h1.47v-.476c0-.43-.04-.925-.12-1.156-.08-.223-.2-.395-.39-.528-.18-.128-.42-.195-.71-.195-.24 0-.44.054-.62.163s-.3.262-.38.47c-.08.214-.13.52-.13 1.063v1.345c0 .173.02.43.052.597.04.162.104.312.196.447.09.127.215.23.375.305.163.076.357.115.575.115.22 0 .41-.04.55-.113.14-.08.26-.19.356-.35.096-.16.16-.31.185-.45.027-.15.04-.36.04-.63v-.21h-.795v.47c0 .25-.018.41-.05.51-.05.13-.165.21-.31.21-.13 0-.23-.07-.276-.18-.02-.06-.05-.15-.05-.45v-.98zm0-.615v-.495c0-.364.02-.31.03-.358.04-.117.14-.186.28-.186.13 0 .22.075.26.203.01.06.03.01.03.35v.64h-.62v-.14z"/></svg>
+                    </span>
+                    <input name="link_rede1" id="link_rede1" placeholder="Ex: www.youtube.com/traytecnologia" class="form-control" type="text">
+                </div>
+                <div class="input-group colorPicker colorpicker-element col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                    <input name="color_tone_11" id="color_tone_11" placeholder="#252525" class="form-control" type="text">
+                </div> 
+                
+                 <!--TWITTER-->
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486.392 486.392" width="18" height="18"><path fill="#50abf1" d="M395.193 0H91.198C40.826 0 0 40.826 0 91.198v303.995c0 50.372 40.826 91.198 91.198 91.198h303.995c50.372 0 91.198-40.82 91.198-91.19v-304C486.4 40.828 445.57 0 395.2 0zm-31.007 188.598l.182 7.752c0 79.16-60.22 170.36-170.36 170.36-33.803 0-65.267-9.91-91.775-26.905 4.682.547 9.454.85 14.288.85 28.06 0 53.87-9.575 74.36-25.626-26.2-.49-48.3-17.82-55.93-41.59 3.678.67 7.387 1.03 11.278 1.03 5.473 0 10.762-.7 15.778-2.067-27.39-5.534-48.03-29.7-48.03-58.7v-.76c8.086 4.497 17.297 7.172 27.116 7.507-16.05-10.73-26.63-29.06-26.63-49.824 0-10.975 2.95-21.25 8.086-30.096 29.518 36.237 73.658 60.07 123.42 62.563-1.032-4.38-1.55-8.97-1.55-13.65 0-33.044 26.814-59.857 59.89-59.857 17.205 0 32.77 7.264 43.713 18.907 13.62-2.705 26.448-7.69 38.03-14.53-4.47 13.984-13.953 25.718-26.326 33.135 12.07-1.43 23.65-4.683 34.38-9.425-8.024 11.977-18.21 22.526-29.91 30.916z"/></svg>
+                    </span>
+                    <input name="link_rede2" id="link_rede2" placeholder="Twitter" class="form-control" type="text">
+                </div>
+                <div class="input-group colorPicker colorpicker-element col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                    <input name="color_tone_12" id="color_tone_12" placeholder="#252525" class="form-control" type="text">
+                </div> 
+                
+                 <!--INSTAGRAM -->
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551.034 551.034" width="18" height="18"><linearGradient id="a" x1="275.517" x2="275.517" y1="4.571" y2="549.72" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 0 554)"><stop offset="0" stop-color="#E09B3D"/><stop offset=".3" stop-color="#C74C4D"/><stop offset=".6" stop-color="#C21975"/><stop offset="1" stop-color="#7024C4"/></linearGradient><path fill="url(#a)" d="M386.878 0H164.156C73.64 0 0 73.64 0 164.156v222.722c0 90.516 73.64 164.156 164.156 164.156h222.722c90.516 0 164.156-73.64 164.156-164.156V164.156C551.034 73.64 477.394 0 386.878 0zM495.6 386.878c0 60.045-48.677 108.722-108.722 108.722H164.156c-60.045 0-108.722-48.677-108.722-108.722V164.156c0-60.046 48.677-108.722 108.722-108.722h222.722c60.045 0 108.722 48.676 108.722 108.722v222.722z"/><linearGradient id="b" x1="275.517" x2="275.517" y1="4.571" y2="549.72" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 0 554)"><stop offset="0" stop-color="#E09B3D"/><stop offset=".3" stop-color="#C74C4D"/><stop offset=".6" stop-color="#C21975"/><stop offset="1" stop-color="#7024C4"/></linearGradient><path fill="url(#b)" d="M275.517 133C196.933 133 133 196.933 133 275.516s63.933 142.517 142.517 142.517S418.034 354.1 418.034 275.516 354.1 133 275.517 133zm0 229.6c-48.095 0-87.083-38.988-87.083-87.083s38.99-87.083 87.083-87.083c48.095 0 87.083 38.988 87.083 87.083 0 48.094-38.99 87.083-87.083 87.083z"/><linearGradient id="c" x1="418.306" x2="418.306" y1="4.571" y2="549.72" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 0 554)"><stop offset="0" stop-color="#E09B3D"/><stop offset=".3" stop-color="#C74C4D"/><stop offset=".6" stop-color="#C21975"/><stop offset="1" stop-color="#7024C4"/></linearGradient><circle cx="418.306" cy="134.072" r="34.149" fill="url(#c)"/></svg>
+                    </span>
+                    <input name="link_rede3" id="link_rede3" placeholder="Instagram" class="form-control" type="text">
+                </div>
+                <div class="input-group colorPicker colorpicker-element col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                    <input name="color_tone_13" id="color_tone_13" placeholder="#252525" class="form-control" type="text">
+                </div> 
+                
+                 <!--GOOGLE PLUS -->
+                <div class="input-group col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486.392 486.392" width="18" height="18"><g fill="#090509"><path d="M395.193 0H91.198C40.826 0 0 40.826 0 91.198v303.995c0 50.372 40.826 91.198 91.198 91.198h303.995c50.372 0 91.198-40.82 91.198-91.19v-304C486.4 40.83 445.57 0 395.2 0zm-219.85 406.836c-53.836 0-99.253-21.918-99.253-56.938 0-35.537 41.434-69.858 95.272-69.828l16.81-.152c-7.356-7.144-13.192-15.93-13.192-26.782 0-6.445 2.067-12.616 4.925-18.118l-8.968.304c-44.23 0-73.84-31.463-73.84-70.466 0-38.15 40.887-71.074 84.36-71.074h96.973l-21.766 15.686H225.93c20.398 7.843 31.25 31.615 31.25 55.996 0 20.46-11.338 38.09-27.36 50.615-15.655 12.25-18.603 17.35-18.603 27.75 0 8.87 16.78 23.95 25.536 30.18 25.627 18.12 33.865 34.93 33.865 62.99-.002 35.02-33.897 69.825-95.274 69.825zm250.25-193.462h-60.8v60.708h-30.368v-60.708h-60.83v-30.977h60.83v-60.8h30.37v60.8h60.798v30.977z" fill="#dd4b39"/><path d="M222.342 167.35c-4.317-32.772-28.06-59.098-53.017-59.858-24.958-.73-41.708 24.35-37.39 57.18 4.316 32.802 28.058 60.01 53.046 60.74 24.93.76 41.71-25.23 37.37-58.063zm-16.568 125.67c-7.357-2.37-15.473-3.8-24.137-3.89-37.21-.395-70.527 22.678-70.527 50.433 0 28.332 26.873 51.86 64.082 51.86 52.317 0 70.527-22.13 70.527-50.4 0-3.406-.46-6.75-1.19-10.002-4.08-16.05-18.58-23.98-38.76-38z" fill="#dd4b39" /></g></svg>
+                    </span>
+                    <input name="link_rede4" id="link_rede4" placeholder="Google+" class="form-control" type="text">
+                </div>
+                <div class="input-group colorPicker colorpicker-element col-sm-6" style="margin: 5px 0;">
+                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                    <input name="color_tone_22" id="color_tone_22" placeholder="#252525" class="form-control" type="text">
+                </div> 
+            </div>
+        </div>
+    </div>  
+    
+    <!-- DEPOIMENTOS -->
+    <div class="form-group">
+        <div class="row">
+            <h2>
+                <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 58" width="40" height="40"><path fill="#EBBA16" d="M44 18.394v21.14c0 2.723-2.207 4.93-4.93 4.93l-17.07.07-10 11v-11H4.93C2.206 44.534 0 42.33 0 39.607v-21.14c0-2.723 2.207-4.93 4.93-4.93l34.14-.07c2.723 0 4.93 2.206 4.93 4.928z"/><path fill="#ED8A19" d="M53.07 2.535l-34.14-.07c-2.723 0-4.93 2.207-4.93 4.93v6.12l25.07-.05c2.723 0 4.93 2.206 4.93 4.93v18.44l7 7.7v-11h2.07c2.723 0 4.93-2.207 4.93-4.93V7.465c0-2.722-2.207-4.93-4.93-4.93z"/><circle cx="11" cy="29.45" r="3" fill="#FFF"/><circle cx="22" cy="29.45" r="3" fill="#FFF"/><circle cx="33" cy="29.45" r="3" fill="#FFF"/></svg></i>
+                Depoimentos
+            </h2>
+            <p>Escolha se quer exibir ou ocultar o campo de depoimento na sua loja</p>
+            <div class="col-sm-4">
+                <select class="form-control" id="chk" name="chk" style="margin-left: 40px;">
+                    <option value="">Selecione</option>
+                    <option value="true">Exibir</option>
+                    <option value="false">Ocultar</option>
+                </select>        
+            </div>
+        </div>
+    </div>
+    
+</fieldset>
+
+

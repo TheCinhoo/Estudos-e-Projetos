@@ -1,0 +1,170 @@
+/*
+ * Tray Commerce Reset
+ */
+
+// bootstrap .container conflict
+.page-content .container {
+    width: auto;
+}
+
+// hiding elements
+.bottom,
+.topBorder,
+.leftCorner2,
+.bLeft,
+.bRight,
+#miniad,
+.stripe {
+    display: none;
+}
+
+// cleaning elements
+.container,
+.container2,
+.container3,
+#title,
+#esquerda,
+#direita,
+#visualAbas,
+#visualAbas li,
+#visualAbas li a,
+#foto_p,
+#colFotos,
+#colVideo,
+#col3D,
+#ProdAbas,
+.prodBox,
+#ProdAbas li,
+#ProdAbas .aberta,
+#ProdAbas li a,
+#ProdAbas .aberta a,
+.visitados {
+    background: none;
+    border: 0;
+}
+
+// fixing display: table
+#visualAbas {
+    display: block;
+    width: auto;
+}
+
+#visualAbas li{
+    display: inline-block;
+    float: none;
+}
+
+#colFotos,
+#colVideo,
+#col3D{
+    display: block;
+    width: auto;
+}
+
+#foto_p{
+    width: auto;
+}
+
+#ProdAbas,
+#ProdBlock{
+    display: block;
+    width: auto;
+}
+
+
+@media screen and (max-width: 1024px){
+    /*------------------------------------*\
+        FINISH SHOPPING
+    \*------------------------------------*/
+    .page-central_cliente,
+    .page-central_anteriores,
+    .page-central_detalhe_pedido,
+    .page-central_confirmar_pagamento,
+    .page-central_rastrear,
+    .page-central_troca,
+    .page-central_senha,
+    .page-central_comentarios,
+    .page-central_lista_espera,
+    .page-navegacao_visitados{
+        
+        #ProdBlock{
+            display: none;
+        }
+        
+        .sidebar-left{
+            display: none;
+        }
+        
+        .icoPai{
+            display: none;
+        }
+        
+        .icoFilho{
+            border: none;
+            width: 50%;
+        }
+        
+        .breadcrumb{
+            margin-top: 2em;    
+        }
+        
+        .Mapa{
+            float: right;
+            margin: 2em 0;
+            position: static;
+            display: none;
+        }
+        
+        .Pedidos,
+        .tablePage{
+            
+            tr{
+                background: none;
+                display: block;
+                
+                &:first-child{
+                    display: none;   
+                }
+            }
+            
+            td{
+                border: none;
+                border-left: 1px solid #000;
+                border-right: 1px solid #000;
+                display: block;
+                padding: 0;
+                text-align: center;
+                width: 100%;
+                
+                &:first-child{
+                    border-top: 1px solid #000;
+                    margin-top: 2em;
+                }
+                
+                &:last-child{
+                    border-bottom: 1px solid #000;
+                }
+                
+                h4{
+                    margin: 0;
+                }
+            }
+            
+        }
+        
+        #modificar_pagamento{
+            float: right;
+            margin-top: 1em;
+            margin-right: 1em;
+        }
+        
+    }
+    
+    .page-central_troca{
+        
+        .tablePage tr:first-child{
+            display: block;
+        }
+        
+    }
+}

@@ -1,0 +1,43 @@
+/**
+ * Newsletter
+ */
+
+.news-button {
+    background: $primary-color;
+    color: #fff;
+    font: 300 1em $primary-font;
+    text-transform: uppercase;
+
+    &:hover {
+        background: #000;
+        color: #fff;
+    }
+}
+
+// Notícias
+.page-content {
+    
+    .noticias {
+        li{
+            float: none;
+            padding: 0;
+            margin: 10px 0;
+            border: 1px dotted #ccc;
+            height: 95px;
+            
+            #noticia_imagem {
+                float: left;
+                width: 95px;
+                height: 95px;
+                text-align: center;
+                margin: 0 5px;
+                padding: 0;
+            }
+            
+            #noticia_dados {
+                overflow: hidden;
+                padding: 15px;
+            }
+        }
+    }
+}
