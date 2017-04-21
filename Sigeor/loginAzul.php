@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>SIGEOR</title>
   <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/estiloazul.css">
   <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
 
 </head>
@@ -19,7 +19,7 @@
 
   <div class="container corpo">
     <div class="col-xs-6">
-      <img src="img/sigeor.jpg" alt="logo" class="logo">
+      <img src="img/sigeorAzul.png" alt="logo" class="logo">
     </div>
 
     <div class="col-xs-4">

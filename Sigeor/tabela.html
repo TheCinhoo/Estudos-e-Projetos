@@ -9,44 +9,53 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
+  <link rel="shortcut icon" href="img/favicon.ico">
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse">
-    <h5>Usuário: Visitante<a href="#"> [Sair]</a></h5>
+  <nav class="navbar">
+    <div class="">
+      <img src="img/nav.png" alt="nav" class="col-md-6">
+    </div>
+    <div class="visit">
+      <p class=" text-right">Usuário: Visitante<a href="#"> [Sair]</a></p >
+    </div>
+    <!--Botões-->
+    <div class="">
+      <div class="botoes">
+        <div class="text-right col-md-6">
+          <div class="right">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Projetos
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" href="#">Filtro de Projetos</a></li>
+                <li role="presentation"><a role="menuitem" href="#">Ultimas Notícias</a></li>
+                <li role="presentation"><a role="menuitem" href="#">Agenda dos Projetos</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Documentos
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" href="#">Manual GEOR</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Botões-->
+    </div>
   </nav>
 
   <div class="container ">
-    <div class="container">
-      <div class="col-md-4">
-        <h3 class="ttlo">Filtro de Projetos</h3>
-      </div>
-      <div class="text-right col-md-6">
-        <div class="right">
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Projetos
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-              <li role="presentation"><a role="menuitem" href="#">Filtro de Projetos</a></li>
-              <li role="presentation"><a role="menuitem" href="#">Ultimas Notícias</a></li>
-              <li role="presentation"><a role="menuitem" href="#">Agenda dos Projetos</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="right">
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Documentos
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-              <li role="presentation"><a role="menuitem" href="#">Manual GEOR</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div class="col-md-4">
+      <h3 class="ttlo">Filtro de Projetos</h3>
     </div>
+
     <table class="table table-striped table-bordered ">
       <thead>
         <tr>

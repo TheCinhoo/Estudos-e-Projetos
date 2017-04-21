@@ -60,10 +60,10 @@ footer {
 }
 
 .logo{
-  margin-top: 25px;
+  margin-top: -3px;
   margin-left: 20%;
   width: auto;
-  height: 350px;;
+  height: 400px;;
 }
 
 .form-signin h2{
@@ -79,9 +79,9 @@ footer {
   color: #666;
 }
 
-.navbar {
+.navbar{
   padding: 15px;
-  background-color: #c8c8c8 !important ;
+  color: #CCC;
 }
 
 .navbar h5{
@@ -90,10 +90,8 @@ footer {
 }
 
 .navbar img{
-  height: 28px;
-  width: auto;
-  padding: 0;
-  margin: auto;
+  max-width: 30px;
+  height: auto;
 }
 
 th{
@@ -109,7 +107,7 @@ th{
 }
 
 .right{
-  margin-right: 0px !important;
+  margin-right: 0px;
   display: inline-block;;
 }
 .botcontainer{
@@ -118,7 +116,7 @@ th{
 }
 
 .ttlo{
-  margin-left: -15px !important;
+  margin-left: -30px !important;
  }
 
 .foc{
@@ -133,16 +131,11 @@ th{
 }
 
 nav{
-  background-color: #C8C8C8;
-  border-bottom: solid 1px #FFF;
+  background-color: #c8c8c8;
+  border-bottom: solid 1px #000;
 }
 
 .corpo{
   display: block;
   margin-top: 50px;
-}
-
-.botoes{
-  margin-top: -50px;
-  padding: 0px;
 }
