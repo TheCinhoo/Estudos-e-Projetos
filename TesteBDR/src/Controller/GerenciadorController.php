@@ -109,17 +109,18 @@ class GerenciadorController extends AppController
     }
 
     public function fizzbuzz(){
-      for ($i=1; $i < 100; $i++) {
-        if ($i%3 == 0) {
-          echo "Fizz<br />";
-          $i++;
-        }if ($i%5 == 0) {
-          echo "Buzz <br />";
-          $i++;
-        } else {
-          echo "$i <br />";
+
+      for ($i = 1; $i <= 100; $i++) {
+        if (($i % 3 === 0) && ($i % 5 ===0)) {
+          echo "FIZZBUZZ<br>";
+        }elseif (($i % 3) === 0) {
+          echo "FIZZ <br>";
+        }elseif (($i % 5) === 0) {
+          echo "BUZZ <br>";
+        }else {
+          echo "$i<br>";
         }
       }
-
     }
+
 }
