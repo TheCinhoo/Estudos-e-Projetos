@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <?php header("Content-type: text/html; charset=utf-8"); ?>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Curso de PHP - Aula 06</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="http://localhost/Estudo/CursoEmVideo/css/estilo.css" rel="stylesheet"/>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="http://localhost/Estudo/CursoEmVideo/css/estilo.css" rel="stylesheet" />
 </head>
+
 <body>
   <div class="container">
     <h2>Operadores de Atribuição</h2>
@@ -24,11 +26,11 @@
     </form>
   </div>
   <?php
-    $valor = $_POST['valor'];
-    $total = $valor - ($valor * 0.1);
-    $total = number_format($total, 2, ',', ".");
-    $valor = number_format($valor, 2, ",", ".");
-    if ($valor != "") {
+  $valor = $_POST['valor'];
+  $total = $valor - ($valor * 0.1);
+  $total = number_format($total, 2, ',', ".");
+  $valor = number_format($valor, 2, ",", ".");
+  if ($valor != "") {
 
   ?>
 
@@ -39,8 +41,9 @@
       echo "<p>O Valor com desconto de 10% é de R$: $total </p>";
 
       echo "</div>";
-    ?>
+      ?>
   </div>
   <?php } ?>
 </body>
+
 </html>

@@ -44,5 +44,3 @@
       echo "Este numero nao e valido";
       break;
   }
-
- ?>

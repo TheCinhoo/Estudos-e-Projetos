@@ -68,10 +68,3 @@
 
   echo "<br>";
   echo $parcela;
-
-
-
-
-
-
-?>

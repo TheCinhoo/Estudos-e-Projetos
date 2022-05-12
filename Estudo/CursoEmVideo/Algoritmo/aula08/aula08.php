@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Condicionais - Aninhadas</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
   <style>
-    .content{
-      max-width: 500px;
-    }
+  .content {
+    max-width: 500px;
+  }
 
-    body{
-      background-color: #BCD2EE;
-    }
+  body {
+    background-color: #BCD2EE;
+  }
 
-    .container{
-      background-color: #EEE;
-      text-align: center;
-      margin: 50px auto;
-      padding: auto;
-      border: solid 0.01em #333;
-      width: 450px;
-      padding-bottom: 20px;
-      box-shadow: 4px 4px 4px #888888;
-      border-radius: 10px;
-    }
+  .container {
+    background-color: #EEE;
+    text-align: center;
+    margin: 50px auto;
+    padding: auto;
+    border: solid 0.01em #333;
+    width: 450px;
+    padding-bottom: 20px;
+    box-shadow: 4px 4px 4px #888888;
+    border-radius: 10px;
+  }
   </style>
 
 </head>
+
 <body>
   <div class="container">
-    <section class = "content">
+    <section class="content">
       <div class="form" role="form">
         <form class="formulario" name="formulario" method="post" action="controller.php">
           <h2>CONDICIONAIS</br></h2>

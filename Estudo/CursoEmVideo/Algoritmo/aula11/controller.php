@@ -15,4 +15,3 @@ for ($i=1; $i <= $contador; $i++) {
   $somador1 = $somador2;
   $somador2 = $somador3;
 }
-?>

@@ -9,4 +9,3 @@
     $c--;
   } while ($c >= 1);
   echo "O Fatorial de $valor é: $fat";
-?>
