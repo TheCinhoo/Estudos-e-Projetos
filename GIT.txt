@@ -1,2 +1,4 @@
 git push -f origin        -> Para forçar o Commit
 git commit -m "MENSAGEM"  -> Comitar
+git add .                 -> Adiciona todos os arquivos modificados a lista para envio
+git clone endereço        -> Baixa os arquivos do repositório 
