@@ -1,0 +1,65 @@
+<ul class="level1 clearfix">
+    
+    <li class="vertodas pull-right">
+        <a href="javascript:void(0)" class="link-level1">
+            <span>todas categorias</span>
+        </a>
+        <div class="level2">
+            <ul class="clearfix">
+                {% for level1 in categories %}
+                <li>
+                    <a href="{{ level1.link }}" class="link-level2">{{ level1.name }}</a>
+                    
+                    {% if level1.children|length > 0 %}
+                        <div class="level3">
+                            <ul class="clearfix">
+                                {% for level2 in level1.children %}
+                                <li>
+                                    <a href="{{ level2.link }}" class="link-level3">{{ level2.name }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </li>
+    
+    {% for level1 in categories %}
+    
+        {% if loop.index < 5 %}
+            <li>
+                <a href="{{ level1.link }}" class="link-level1">
+                    <span>{{ level1.name }}</span>
+                </a>
+                
+                {% if level1.children|length > 0 %}
+                    <div class="level2">
+                        <ul class="clearfix">
+                            {% for level2 in level1.children %}
+                            <li>
+                                <a href="{{ level2.link }}" class="link-level2">{{ level2.name }}</a>
+                                {% if level2.children|length > 0 %}
+                                    <div class="level3">
+                                        <ul class="clearfix">
+                                            {% for level3 in level2.children %}
+                                            <li>
+                                                <a href="{{ level3.link }}" class="link-level3">{{ level3.name }}</a>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+        	</li>
+        {% endif %}
+     
+    {% endfor %}
+
+</ul>

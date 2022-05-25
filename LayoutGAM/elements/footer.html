@@ -1,0 +1,202 @@
+{% set linkReplace = {
+'links.home': links.home,
+'links.contact': links.contact,
+'links.company': links.company,
+'links.info': links.info,
+'links.info_buy': links.info_buy,
+'links.security': links.security,
+'links.warranty': links.warranty,
+'links.send': links.send,
+'links.payment': links.payment,
+'links.newsletter': links.newsletter,
+'links.map': links.map,
+'links.compare': links.compare,
+'links.register': links.register
+} %}
+<footer class="footer">
+	<div class="agrupa-news">
+		<div id="page" class="container ">
+			<div class="row">
+				<div class="news nospace" >
+					<div class="banner4">
+						{% if banner.extra4 %}{{ banner.extra4 }}{% endif %}
+					</div>
+					<div class="caixaNews">{{ _view.element('snippets/newsletter') }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="conteudoRodape clearfix">
+		<div class="conteudoRodape2">
+			<div id="page" class="container">
+				<div class="col-sm-12">
+					<div class="horario-atendimento">
+						<span class="textop">Atendimento</span>
+						<span class="telefone">
+							<span class="agrupa-svg">
+								<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 578.106 578.106" style="enable-background:new 0 0 578.106 578.106;" xml:space="preserve"><g><g><path style="fill:{{settings.color_tone_20}};" d="M577.83,456.128c1.225,9.385-1.635,17.545-8.568,24.48l-81.396,80.781c-3.672,4.08-8.465,7.551-14.381,10.404c-5.916,2.857-11.729,4.693-17.439,5.508c-0.408,0-1.635,0.105-3.676,0.309c-2.037,0.203-4.689,0.307-7.953,0.307c-7.754,0-20.301-1.326-37.641-3.979s-38.555-9.182-63.645-19.584c-25.096-10.404-53.553-26.012-85.376-46.818c-31.823-20.805-65.688-49.367-101.592-85.68c-28.56-28.152-52.224-55.08-70.992-80.783c-18.768-25.705-33.864-49.471-45.288-71.299c-11.425-21.828-19.993-41.616-25.705-59.364S4.59,177.362,2.55,164.51s-2.856-22.95-2.448-30.294c0.408-7.344,0.612-11.424,0.612-12.24c0.816-5.712,2.652-11.526,5.508-17.442s6.324-10.71,10.404-14.382L98.022,8.756c5.712-5.712,12.24-8.568,19.584-8.568c5.304,0,9.996,1.53,14.076,4.59s7.548,6.834,10.404,11.322l65.484,124.236c3.672,6.528,4.692,13.668,3.06,21.42c-1.632,7.752-5.1,14.28-10.404,19.584l-29.988,29.988c-0.816,0.816-1.53,2.142-2.142,3.978s-0.918,3.366-0.918,4.59c1.632,8.568,5.304,18.36,11.016,29.376c4.896,9.792,12.444,21.726,22.644,35.802s24.684,30.293,43.452,48.653c18.36,18.77,34.68,33.354,48.96,43.76c14.277,10.4,26.215,18.053,35.803,22.949c9.588,4.896,16.932,7.854,22.031,8.871l7.648,1.531c0.816,0,2.145-0.307,3.979-0.918c1.836-0.613,3.162-1.326,3.979-2.143l34.883-35.496c7.348-6.527,15.912-9.791,25.705-9.791c6.938,0,12.443,1.223,16.523,3.672h0.611l118.115,69.768C571.098,441.238,576.197,447.968,577.83,456.128z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+							</span>
+							<div class="agrupa-telefone">
+								<p class="texto">{{ Translation('ag_telefone_1')}}</p>
+								<p class="texto">{{ Translation('ag_telefone_2')}}</p>
+								<p class="texto2">Ligue e tire suas d&uacute;vidas</p>
+							</div>
+						</span>
+							
+						<span class="telefone">
+							<span class="agrupa-svg">
+								<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve"><g><g><path style="fill:{{settings.color_tone_20}};" d="M7,9L5.268,7.484l-4.952,4.245C0.496,11.896,0.739,12,1.007,12h11.986c0.267,0,0.509-0.104,0.688-0.271L8.732,7.484L7,9z"/><path style="fill:{{settings.color_tone_20}};" d="M13.684,2.271C13.504,2.103,13.262,2,12.993,2H1.007C0.74,2,0.498,2.104,0.318,2.273L7,8L13.684,2.271z"/><polygon style="fill:{{settings.color_tone_20}};" points="0,2.878 0,11.186 4.833,7.079 "/><polygon style="fill:{{settings.color_tone_20}};" points="9.167,7.079 14,11.186 14,2.875 "/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+							</span>
+							<div class="agrupa-telefone">
+								<p class="texto break-letter">{{ Translation('ag_email_1')}}</p>
+								<p class="texto break-letter">{{ Translation('ag_email_2')}}</p>
+								<p class="texto2">Nos contate pelo e-mail</p>
+							</div>
+						</span>
+						<span class="telefone">
+							<span class="agrupa-svg">
+								<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 97.16 97.16" style="enable-background:new 0 0 97.16 97.16;" xml:space="preserve"><g><g><path style="fill:{{settings.color_tone_20}};" d="M48.58,0C21.793,0,0,21.793,0,48.58s21.793,48.58,48.58,48.58s48.58-21.793,48.58-48.58S75.367,0,48.58,0z M48.58,86.823c-21.087,0-38.244-17.155-38.244-38.243S27.493,10.337,48.58,10.337S86.824,27.492,86.824,48.58S69.667,86.823,48.58,86.823z"/><path style="fill:{{settings.color_tone_20}};" d="M73.898,47.08H52.066V20.83c0-2.209-1.791-4-4-4c-2.209,0-4,1.791-4,4v30.25c0,2.209,1.791,4,4,4h25.832c2.209,0,4-1.791,4-4S76.107,47.08,73.898,47.08z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+							</span>
+							<div class="agrupa-telefone">
+								<p class="texto">{{ Translation('ag_atendimento')}}</p>
+								<p class="texto2">Hor&aacute;rio de atendimento</p>
+							</div>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="page" class="container">
+			<div>
+				<div class="clearfix">
+					<div class="listaLinks col-sm-3 col-xs-12">
+						<h4 class="footer-title">institucional</h4>
+						<ul>
+							{% for custom in pages.custom %}
+								<li>
+									<a href="{{ custom.url }}">{{ custom.name }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+					
+					{% if settings.exibe_links == 'true' %}
+						<div class="listaLinks duvidas col-sm-3 col-xs-12">
+							<h4 class="footer-title">{{ settings.titulo_extras }}</h4>
+							<ul>
+								<li>
+									<a href="{{ settings.extra_links }}" target="_blank">{{ settings.texto_extra_links }} </a>
+								</li>
+								<li>
+									<a href="{{ settings.extra_links2 }}" target="_blank">{{ settings.texto_extra_links2 }} </a>
+								</li>
+								<li>
+									<a href="{{ settings.extra_links3 }}" target="_blank">{{ settings.texto_extra_links3 }} </a>
+								</li>
+								<li>
+									<a href="{{ settings.extra_links4 }}" target="_blank">{{ settings.texto_extra_links4 }} </a>
+								</li>
+								<li>
+									<a href="{{ settings.extra_links5 }}" target="_blank">{{ settings.texto_extra_links5 }} </a>
+								</li>
+							</ul>
+						</div>
+					{% endif %}
+					
+					<div class="listaLinks duvidas col-sm-12 col-md-3 col-xs-12">
+						<h4 class="footer-title">formas de pagamento</h4>
+						<ul class="clearfix">
+							{% for payment in paymentMethods.order %}
+								<li class="item-pagamento">
+									<img src="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}">
+								</li>
+							{% endfor %}
+						
+							{% for payment in paymentMethods.credit %}
+								<li class="item-pagamento">
+									<img src="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}">
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="likebox col-sm-12 col-md-3 nospace">
+						{{ settings.like_box }}
+					</div>
+				</div>
+				
+				<div class="novo-container clearfix">
+					
+					{% if settings.exibe_envio == 'true' %}
+						<div class="listaLinks duvidas col-sm-4 ">
+							<h4 class="footer-title">formas de entrega</h4>
+							<ul>
+								<li><img src="{{ themePath }}{{ settings.img_entrega }}" alt="Formas de pagamento" /></li>
+							</ul>
+						</div>
+					{% endif %}
+					
+					{% if seals.ebit or seals.hackersafe %}
+						<div class="listaLinks duvidas col-sm-4">
+							<h4 class="footer-title">Seguran&ccedil;a</h4>
+							<ul>
+								{% if seals.hackersafe %}
+								<li class="loja-protegida">{{ seals.hackersafe }}</li>
+								{% endif %}
+								
+								{% if seals.ebit %}
+								<li>{{ seals.ebit }}</li>
+								{% endif %}
+							</ul>
+						</div>
+					{% endif %}
+					
+					{% if settings.exibe_social == 'true' %}
+						<div class="listaLinks duvidas col-md-4 col-sm-12">
+							<span class="footer-title">Acompanhe:</span>
+							<div class="agrupalinksrede">
+								{% if settings.link_rede1 %}
+									<a href="{{ settings.link_rede1 }}" target="_blank" rel="external">
+										<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 97.75 97.75"><g fill="{{ settings.color_tone_11 }}"><path d="M25.676 52.482h3.875v20.973h3.67V52.482h3.95v-3.435H25.68m31 6c-1.214 0-2.345.66-3.408 1.97v-7.97h-3.295v24.41h3.295v-1.764c1.1 1.36 2.23 2.013 3.404 2.013 1.31 0 2.193-.69 2.633-2.044.22-.77.33-1.982.33-3.665v-7.242c0-1.722-.11-2.924-.33-3.655-.44-1.364-1.33-2.054-2.64-2.054zm-.33 13.21c0 1.642-.484 2.452-1.436 2.452-.54 0-1.09-.26-1.642-.82V58.81c.55-.545 1.103-.803 1.644-.803.95 0 1.435.845 1.435 2.485v7.762zm-12.52.91c-.73 1.033-1.424 1.542-2.086 1.542-.44 0-.69-.26-.77-.78-.03-.11-.03-.51-.03-1.28V55.26h-3.296v14.38c0 1.285.11 2.153.29 2.705.332.922 1.064 1.354 2.124 1.354 1.214 0 2.458-.73 3.768-2.24v1.984h3.298V55.27H43.83v13.9zm2.827-30.7c1.073 0 1.588-.85 1.588-2.55v-7.733c0-1.7-.513-2.548-1.586-2.548-1.08 0-1.59.848-1.59 2.548v7.73c0 1.702.51 2.552 1.59 2.552z"></path><path d="M48.875 0C21.882 0 0 21.882 0 48.875S21.882 97.75 48.875 97.75 97.75 75.868 97.75 48.875 75.868 0 48.875 0zm5.436 22.86h3.33v13.532c0 .78 0 1.186.04 1.295.08.516.34.78.78.78.67 0 1.37-.516 2.11-1.56V22.86h3.33v18.38h-3.33v-2.005c-1.324 1.52-2.59 2.257-3.803 2.257-1.072 0-1.812-.435-2.146-1.365-.184-.557-.295-1.436-.295-2.733V22.86zm-12.57 5.993c0-1.965.34-3.4 1.05-4.33.92-1.257 2.218-1.885 3.878-1.885 1.668 0 2.964.628 3.885 1.885.698.928 1.03 2.365 1.03 4.33v6.436c0 1.95-.332 3.4-1.03 4.32-.92 1.25-2.217 1.88-3.885 1.88-1.66 0-2.96-.63-3.88-1.88-.71-.92-1.044-2.37-1.044-4.33v-6.43zm-8.91-12.277l2.62 9.685 2.52-9.68h3.74l-4.45 14.67v9.99h-3.69v-9.99c-.333-1.77-1.072-4.36-2.26-7.8-.775-2.29-1.59-4.583-2.364-6.87h3.885zM75.19 75.06c-.67 2.9-3.04 5.04-5.896 5.36-6.763.756-13.604.76-20.42.756-6.813.004-13.658 0-20.42-.755-2.854-.32-5.226-2.46-5.892-5.36-.95-4.12-.95-8.63-.95-12.89s.01-8.76.96-12.89c.67-2.9 3.04-5.04 5.894-5.35 6.762-.75 13.606-.76 20.42-.75 6.814-.002 13.658 0 20.42.757 2.855.32 5.227 2.458 5.896 5.358.947 4.13.94 8.64.94 12.89s-.003 8.764-.954 12.89z"></path><path d="M67.17 55.046c-1.686 0-2.995.62-3.947 1.864-.7.92-1.018 2.342-1.018 4.285v6.37c0 1.934.357 3.366 1.06 4.277.95 1.242 2.263 1.863 3.987 1.863 1.72 0 3.072-.65 3.984-1.972.4-.584.66-1.245.77-1.975.03-.33.07-1.06.07-2.124v-.48h-3.36c0 1.32-.044 2.054-.073 2.233-.188.88-.662 1.32-1.473 1.32-1.132 0-1.686-.84-1.686-2.52V64.96h6.592v-3.767c0-1.943-.33-3.365-1.02-4.285-.92-1.242-2.232-1.862-3.886-1.862zm1.612 7.172h-3.296v-1.683c0-1.682.553-2.523 1.654-2.523 1.09 0 1.642.842 1.642 2.523v1.683z"></path></g></svg>
+									</a>
+								{% endif %}
+								{% if settings.link_rede2 %}
+									<a href="{{ settings.link_rede2 }}" target="_blank" rel="external">
+										<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 49.652 49.652"><path fill="{{ settings.color_tone_12 }}" d="M24.826 0C11.136 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.136 38.516 0 24.826 0zM35.9 19.144c.012.246.018.494.018.742 0 7.55-5.746 16.255-16.26 16.255-3.226 0-6.23-.94-8.758-2.562.447.053.902.08 1.363.08 2.678 0 5.14-.914 7.097-2.446-2.5-.045-4.61-1.697-5.338-3.97.348.068.707.105 1.074.105.52 0 1.027-.068 1.506-.2-2.614-.523-4.583-2.832-4.583-5.602v-.072c.77.428 1.65.686 2.585.715-1.532-1.023-2.54-2.773-2.54-4.755 0-1.05.28-2.03.772-2.875 2.816 3.458 7.028 5.732 11.776 5.972-.098-.42-.147-.854-.147-1.303 0-3.155 2.557-5.714 5.712-5.714 1.643 0 3.126.694 4.17 1.804 1.303-.256 2.523-.73 3.63-1.387-.43 1.335-1.333 2.454-2.516 3.162 1.157-.14 2.26-.446 3.282-.9-.763 1.143-1.732 2.15-2.85 2.953z"></path></svg>
+									</a>
+								{% endif %}
+								{% if settings.link_rede3 %}
+									<a href="{{ settings.link_rede3 }}" target="_blank" rel="external">
+										<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 49.652 49.652"><g fill="{{ settings.color_tone_13 }}"><path d="M24.825 29.796c2.74 0 4.972-2.23 4.972-4.97 0-1.082-.354-2.08-.94-2.897-.903-1.257-2.37-2.078-4.03-2.078-1.658 0-3.125.82-4.03 2.072-.588.816-.94 1.815-.94 2.897-.003 2.74 2.228 4.97 4.968 4.97zm10.853-11.05V13.96l-.623.002-4.164.013.02 4.787"></path><path d="M24.826 0C11.136 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.136 38.516 0 24.826 0zm14.12 21.93v11.56c0 3.01-2.45 5.457-5.458 5.457H16.164c-3.01 0-5.457-2.447-5.457-5.458V16.16c0-3.01 2.447-5.457 5.457-5.457h17.323c3.01 0 5.458 2.447 5.458 5.457v5.764z"></path><path d="M32.55 24.826c0 4.257-3.465 7.723-7.724 7.723-4.26 0-7.722-3.47-7.722-7.728 0-1.024.204-2.003.568-2.897h-4.215v11.56c0 1.493 1.213 2.703 2.706 2.703h17.323c1.49 0 2.706-1.21 2.706-2.704V21.93h-4.217c.367.893.574 1.872.574 2.896z"></path></g></svg>
+									</a>
+								{% endif %}
+								{% if settings.link_rede4 %}
+									<a href="{{ settings.link_rede4 }}" target="_blank" rel="external">
+										<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 533.333 533.333"><path fill="{{ settings.color_tone_22 }}" d="M227.607 426.126c0 39.1-24.16 69.996-92.582 72.487-40.096-22.805-73.693-55.703-97.348-95.242 12.34-30.463 50.88-53.67 94.957-53.18 12.51.13 24.172 2.14 34.763 5.57 29.118 20.24 52.604 32.89 58.5 55.96 1.102 4.67 1.71 9.487 1.71 14.408zM266.667 0C189.614 0 120.21 32.692 71.527 84.947c19.237-10.652 41.948-17 66.096-17h133.56L241.34 99.272h-35.06c24.738 14.174 37.892 43.36 37.892 75.528 0 29.527-16.362 53.323-39.47 71.384-22.54 17.605-26.818 24.983-26.818 39.966 0 12.78 26.938 31.82 39.323 41.112 43.135 32.35 51.863 52.7 51.863 93.163 0 41-35.903 81.824-96.804 95.696 29.348 11.116 61.16 17.215 94.4 17.215 147.275 0 266.667-119.39 266.667-266.666C533.333 119.39 413.943 0 266.667 0zM400 200v66.667h-33.333V200H300v-33.333h66.667V100H400v66.667h66.667V200H400zm-209.496-23.192c6.21 47.28-14.503 77.704-50.486 76.632-36.003-1.084-70.21-34.11-76.427-81.375C57.38 124.78 81.52 88.6 117.517 89.67c35.984 1.08 66.78 39.867 72.99 87.138zm-75.46 157.602c-38.896 0-71.94 13.42-95.23 33.263C7.054 336.518 0 302.417 0 266.667c0-29.566 4.82-58.004 13.704-84.582 3.84 51.793 40.288 91.768 100.506 91.768 4.434 0 8.73-.23 12.955-.533-4.14 7.933-7.095 16.767-7.095 26.032 0 15.61 8.587 24.517 19.202 34.842-8.022 0-15.766.216-24.228.216z"></path></svg>
+									</a>
+								{% endif %}
+							</div>
+						</div>
+					{% endif %}
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="dados-rodape-info col-sm-12 col-xs-12">
+			{{ Translation('ag_mensagem_rodape') }}
+		</div>
+	</div>
+	
+	
+</footer>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=1541317606114357&version=v2.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+{{ settings.chat_box }}

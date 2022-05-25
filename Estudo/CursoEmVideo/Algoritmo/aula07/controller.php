@@ -79,4 +79,3 @@
   echo "<br><br><br>";
   $notafinal = mediaFinal($n1, $n2);
   echo $notafinal;
- ?>

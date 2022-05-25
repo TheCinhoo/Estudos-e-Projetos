@@ -1,0 +1,16 @@
+<ul>
+    {% for category in categories %}
+        <li class="id_{{ category.id }}">
+            <a href="{{ category.link }}"><span></span>{{ category.name }}{% if category.children|length > 0 %}<div class="ico-seta"></div>{% endif %}</a>
+            {% if category.children|length > 0 %}
+            <div class="level3">
+                <ul>
+                    {% for child in category.children %}
+                    <li><a href="{{ child.link }}">{{ child.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </li>
+    {% endfor %} 
+</ul>

@@ -2,9 +2,3 @@
   /*
     OPERADORES RELACIONAIS E LOGICOS
   */
-
-  
-
-
-
- ?>

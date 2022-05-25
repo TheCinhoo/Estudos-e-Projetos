@@ -1,0 +1,18 @@
+{% if products|length > 0 %}
+    <div class="tituloVitrine">
+        <div>
+            <span>{{ showcaseTitle }}</span>
+        </div>
+    </div>
+
+<!-- slider -->
+         <div class="slideDestaque galeria">
+            <ul>
+            {% for product in products %}
+                <li>{{ _view.element('snippets/product', {"product": product}) }}</li>
+                {% set categoria = Categories( { "id": categoria } ) %}
+            {% endfor %}
+            </ul>
+     </div>
+<!-- slider -->
+{% endif %}

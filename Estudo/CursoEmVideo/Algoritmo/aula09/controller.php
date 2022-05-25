@@ -20,4 +20,3 @@
 
   $cont = contador($inicio, $fim);
   echo $cont;
-?>

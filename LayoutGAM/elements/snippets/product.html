@@ -1,0 +1,81 @@
+<a href="{{ product.link }}">
+    
+    <div class="product-image">
+        <img class="img-responsive" src="{{ product.images[0].full }}" alt="{{ product.name }}">
+    </div>
+    
+    <div class="product-name">
+        <h3> {{product.name | striptags|slice(0, 90)}} </h3>
+    </div> 
+    
+    <div class="product-price">
+        
+        {% if product.price_offer > 0 %}
+            <div class="precode" id="precoDe">
+                <span>de </span> R$ {{ product.price|number_format(2, ',', '.') }}
+            </div>
+            <span class="precoAvista">
+                
+                {% if product.has_other_prices %}
+                    {{ Translation('a_partir_de') }}
+                {% else %}
+                    por 
+                {% endif %}
+                
+                R$ {{product.price_offer|number_format(2, ',', '.')  }}
+            </span>
+        {% else %}
+            <div class="precoAvista" >
+                {% if  product.price == 0   %}
+                    Sob Consulta
+                {% else %}
+                
+                    {% if product.has_other_prices %}
+                        {{ Translation('a_partir_de') }}
+                    {% else %}
+                        por 
+                    {% endif %}
+                    
+                    R$ {{ product.price|number_format(2, ',', '.') }}
+                {% endif %}
+            </div>
+        {% endif %}
+        
+        <div class="parcelamento">{{ product.payment }}</div>
+        
+    </div>
+
+    <div class="botoes-extras">
+
+        {% if product.additional_button %}
+            {{ Image('additional_button') }}
+        {% endif %}
+        
+        {% if product.featured %} 
+            <span class="botao-commerce">{{ Image('featured') }}  </span>
+        {% endif %} 
+        
+        {% if product.free_shipping %}
+            <span class="botao-commerce ">{{ Image('free_shipping') }} </span>
+        {% endif %}
+        
+        {% if product.new %}
+            <span class="botao-commerce ">{{ Image('new') }}      </span>
+        {% endif %}     
+        
+        {% if not product.available %}
+            <span class="botao-commerce ">{{ Image('unavailable_button') }}    </span>
+        {% endif %}
+        
+    </div>
+
+    <div class="btComprar">
+        <span></span>
+        Colocar no <strong>Carrinho</strong>
+    </div>
+    
+    {% if pages.current == 'catalog' and settings.compare %}
+        {% element 'snippets/comparador' {"product": product} %}  
+    {% endif %}
+    
+</a>

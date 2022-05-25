@@ -1,0 +1,49 @@
+<div id="page" class="container">
+    <div class="row">
+        <div class="banners row">
+            <div class="banner1  col-sm-4">
+                {% if banner.extra1 %}{{ banner.extra1 }}{% endif %}
+            </div>
+            <div class="banner2  col-sm-4">
+                {% if banner.extra2 %}{{ banner.extra2 }}{% endif %}
+            </div>
+            <div class="banner3  col-sm-4">
+                {% if banner.extra3 %}{{ banner.extra3 }}{% endif %}
+            </div>
+        </div>
+        <div class="slider listaVendidos">
+            {% set vendidos = Products({ 
+            'filter': 'featured',
+            'order': 'rand',
+            'limit': 12
+            }) %} 
+            {{ _view.element('snippets/showcase', {
+            "showcaseTitle": "Destaques",
+            "products": vendidos
+            }) }}
+        </div>
+        
+  
+    </div>
+
+</div>
+
+{% if settings.chk == 'true' %}
+<div class="Depoimentos">
+     <div class="col-sm-12">
+        
+        <div class="tituloAvaliacoes">
+            <strong>depoimentos de clientes</strong>
+        </div>
+        
+        <div class="listaAvaliacoes">{{ _view.element('CustomerReview.reviews') }}</div>
+        
+        <div class="vermais"> 
+            <span> 
+                <a href="depoimentos.php?">ver mais depoimentos</a>
+            </span>
+        </div>
+        
+    </div>
+</div>
+{% endif %}

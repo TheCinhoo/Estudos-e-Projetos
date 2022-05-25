@@ -1,0 +1,210 @@
+ 
+ 
+{% set fonts = {
+'font-ubuntu': '//fonts.googleapis.com/css?family=Ubuntu:500italic,700italic,500,300,700,400italic,300italic,400',
+'font-lato': '//fonts.googleapis.com/css?family=Lato:100,900,700italic,300,400,400italic,100italic,900italic,300italic,700',
+'font-averia': '//fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700,400italic',
+'font-exo': '//fonts.googleapis.com/css?family=Exo:900,100,700,400,800,500,200,600,100italic,200italic,400italic,300italic,500italic,600italic,700italic,800italic,900italic',
+'font-nunito': '//fonts.googleapis.com/css?family=Nunito:300,700',
+'font-amaranth': '//fonts.googleapis.com/css?family=Amaranth:400,700',
+'font-maven-pro': '//fonts.googleapis.com/css?family=Maven+Pro:400,700',
+'font-lora': '//fonts.googleapis.com/css?family=Lora:400,700',
+'font-asap': '//fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic'
+} %}
+<link type="text/css" rel="stylesheet" href="{{ attribute(fonts, settings.fonts) }}" media="all">
+{#
+# Aplicaзгo de cores e backgrounds
+#}
+<style media="screen" type="text/css">
+/*topo*/
+/*barra cima*/
+.theme-{{ themeID }} .acessoArea a{
+color: {{ settings.color_tone_1 }};
+}
+.theme-{{ themeID }} .acessoArea p{
+color: {{ settings.color_tone_1 }};
+}.theme-{{ themeID }} .acessoArea li{
+color: {{ settings.color_tone_1 }};
+}
+.theme-{{ themeID }} .links-top li a{
+color: {{ settings.color_tone_1 }};
+
+}
+
+.theme-{{ themeID }} .fundo1{
+background:  {{ settings.color_tone_16 }};
+}
+ 
+
+.theme-{{ themeID }} .fundo2{
+background:  {{ settings.color_tone_18 }};
+}
+.theme-{{ themeID }} .vertodas .categorias{
+background:  {{ settings.color_tone_18 }};
+}
+
+.theme-{{ themeID }} .footer{
+border-color: {{ settings.color_tone_9 }};
+}
+
+/*barra cima*/
+/*login*/
+.theme-{{ themeID }} .login-conta .texto .agrupa-texto{
+color: {{ settings.color_tone_2 }};
+}
+/*login*/
+/*carrinho*/
+ 
+.theme-{{ themeID }} .minicart .qtdeCarrinho{
+
+background: {{ settings.color_tone_3 }};
+border-color: {{ settings.color_tone_3 }};
+}
+.theme-{{ themeID }} .carrinho-tabs .passo-num{
+
+background: {{ settings.color_tone_3 }};
+
+}
+
+
+.theme-{{ themeID }} .minicart .ico-carrinho i{
+color: {{ settings.color_tone_3 }};
+
+}
+/*carrinho*/
+/*Barra busca*/
+.theme-{{ themeID }} .caixaBusca .search-button i{
+color: {{ settings.color_tone_4 }} ;
+
+}
+
+@media (max-width: 1024px) {
+.theme-{{ themeID }} .agrupaconteudo-mobile{
+background: {{ settings.color_header_mobile }} ;
+}
+}
+/*Barra busca*/
+
+/*menu*/
+.theme-{{ themeID }} .main-menu .link-level1{
+color: {{ settings.color_tone_5 }};
+
+} 
+.theme-{{ themeID }} .main-menu .level1 > li:hover > .link-level1{
+color: {{ settings.color_tone_6 }};
+}
+
+.theme-{{ themeID }} .main-menu .level2 > ul{
+background: {{ settings.color_tone_17 }}; 
+}
+
+.theme-{{ themeID }} .main-menu .link-level2,
+.theme-{{ themeID }} .main-menu .link-level3{
+color: {{ settings.color_tone_23 }}; 
+}
+
+.theme-{{ themeID }} .main-menu .vertodas .link-level2,
+.theme-{{ themeID }} .main-menu .vertodas .link-level3{
+color: {{ settings.color_tone_24 }}; 
+}
+
+.theme-{{ themeID }} .menuSuperior .listaMenu .submenu::after{
+border-bottom:8px solid  {{ settings.color_tone_17 }};
+}
+
+
+/*menu*/
+/*vitrine*/
+.theme-{{ themeID }} .precoAvista, .txt-por{
+color: {{ settings.color_tone_7 }};
+}
+ 
+.theme-{{ themeID }} .preco-parc2 strong{
+color: {{ settings.color_tone_8 }};
+}
+
+.txt-cadaparcelas {
+    color: {{ settings.color_tone_8 }};
+}
+
+.theme-{{ themeID }} .listaVendidos .tituloVitrine span{
+color: {{ settings.color_tone_8 }};
+}.theme-{{ themeID }} .listaVendidos .tituloVitrine{
+ border-bottom: solid 1px {{ settings.color_tone_8 }};
+}
+/*vitrine*/
+
+/*depoimentos*/
+.theme-{{ themeID }} .dep_nome {
+color: {{ settings.color_tone_7 }};
+}
+ 
+
+/*depoimentos*/
+
+
+
+/*newslleter*/
+.theme-{{ themeID }} .agrupa-news{
+background: {{ settings.color_tone_9 }};
+}
+
+
+.theme-{{ themeID }} .conteudoRodape2{
+border-color: {{ settings.color_tone_9 }};
+}
+.theme-{{ themeID }} .caixaNews button.news-button{
+background: {{ settings.color_tone_14 }};
+}
+/*newslleter*/
+.theme-{{ themeID }}  #logotipo .logo-color{
+color: {{ settings.color_text_logo }};
+}
+
+
+
+
+/*links rodape*/
+.theme-{{ themeID }}  .footer .footer-title{
+color: {{ settings.color_tone_15 }};
+}
+.theme-{{ themeID }} .horario-atendimento .textop{
+color: {{ settings.color_tone_21 }};
+}
+.theme-{{ themeID }} .listaLinks.duvidas .titulo3{
+color: {{ settings.color_tone_15 }};
+}
+
+/*links rodape*/
+.theme-{{ themeID }}  .footer li a{
+color: {{ settings.color_tone_10 }};
+}
+.theme-{{ themeID }}  .telefone .texto2{ 
+color: {{ settings.color_tone_21 }};
+}
+.theme-{{ themeID }}  .telefone .texto{
+color: {{ settings.color_tone_21 }};
+}
+.theme-{{ themeID }}  .horario-atendimento .texto{
+color: {{ settings.color_tone_21 }};
+}
+
+/*links rodape*/
+/*redes*/
+.theme-{{ themeID }} .youtube{
+background: {{ settings.color_tone_11 }};
+}
+.theme-{{ themeID }} .twitter{
+background: {{ settings.color_tone_12 }};
+}
+.theme-{{ themeID }} .instagram{
+background: {{ settings.color_tone_13 }};
+}
+ 
+
+ 
+
+
+
+/*redes*/
+</style>

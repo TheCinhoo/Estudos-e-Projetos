@@ -1,0 +1,141 @@
+body {
+  background: #eee !important;
+}
+
+.wrapper {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 30px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.titulo{
+  margin: 10px;
+  color: #EEE;
+  font-weight: bold;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  height: 100px;
+  bottom: 0px;
+  width: 100%;
+  margin-bottom: -70px;
+}
+
+.logo{
+  margin-top: -3px;
+  margin-left: 20%;
+  width: auto;
+  height: 400px;;
+}
+
+.form-signin h2{
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  color: #636363;
+  text-align: center;
+}
+
+.btn-default{
+  font-weight: bold;
+  color: #666;
+}
+
+.navbar{
+  padding: 15px;
+  color: #CCC;
+}
+
+.navbar h5{
+  text-align: right;
+  margin:0;
+}
+
+.navbar img{
+  max-width: 30px;
+  height: auto;
+}
+
+th{
+  text-align: center;
+  background-color: #BBB;
+  border-radius: 5px;
+}
+.ne{
+  font-weight: bold;
+  text-align: center;
+  margin-left: auto;
+  display: inline-grid;
+}
+
+.right{
+  margin-right: 0px;
+  display: inline-block;;
+}
+.botcontainer{
+  margin:auto;
+  width: 400px;
+}
+
+.ttlo{
+  margin-left: -30px !important;
+ }
+
+.foc{
+  background-color: #DDD;
+}
+
+.sebrae{
+  display: block;
+  margin: 20px auto;
+  height: 90px;
+  width: auto;
+}
+
+nav{
+  background-color: #c8c8c8;
+  border-bottom: solid 1px #000;
+}
+
+.corpo{
+  display: block;
+  margin-top: 50px;
+}

@@ -1,0 +1,14 @@
+<div id="logotipo" class="logotipo rigth">
+    {% set h2 = ['produto','catalogo','busca','busca_avancada'] %}
+    {% set tag = pages.current in(h2) ? 'h2' : 'h1' %}
+
+    <{{ tag }}>
+    <a data-tray-tst="logotipo_loja" href="{{ links.home }}" title="{{ store.name }}" class="logo-color">
+      {% if settings.logo_radio == "image" %}
+        <img src="{{ themePath }}{{ settings.logo_image }}" alt="{{ store.name }}" />
+      {% else %}
+        {{ settings.logo_text }}
+      {% endif %}
+    </a>
+    {{ '</' ~ tag ~ '>' }}
+</div>

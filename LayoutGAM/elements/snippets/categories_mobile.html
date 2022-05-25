@@ -1,0 +1,46 @@
+<h3 class="col-xs-12">
+    <i class="pull-left back-category"><svg version="1.1" fill="#fff" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20" height="20" viewBox="0 0 459 459" style="enable-background:new 0 0 459 459;" xml:space="preserve"><g><g id="reply"><path d="M178.5,140.25v-102L0,216.75l178.5,178.5V290.7c127.5,0,216.75,40.8,280.5,130.05C433.5,293.25,357,165.75,178.5,140.25z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></i>
+    <i class="pull-right close-menu-mobile"><svg version="1.1" fill="#fff" width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 28 28" style="enable-background:new 0 0 28 28;" xml:space="preserve"><g><g id="x"><g><polygon points="28,22.398 19.594,14 28,5.602 22.398,0 14,8.402 5.598,0 0,5.602 8.398,14 0,22.398 5.598,28 14,19.598 22.398,28 "/></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></i>
+    Categorias
+</h3>
+<ul class="level1 clearfix">
+    {% for level1 in categories %}
+        <li class="item-level1 col-xs-12">
+            {% if level1.children %}
+                <i class="icon-arrow pull-right"><svg version="1.1" width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 223.413 223.413" style="enable-background:new 0 0 223.413 223.413;" xml:space="preserve"><g><g><g><polygon style="fill:#010002;" points="57.179,223.413 51.224,217.276 159.925,111.71 51.224,6.127 57.179,0 172.189,111.71 "/></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></i>
+                <a href="javascript:void(0)" class="link-level1">
+                    <span>{{ level1.name }}</span>
+                </a>
+                {% if level1.children %}
+                    <div class="level2">
+                        <ul class="clearfix">
+                            {% for level2 in level1.children %}
+                                <li class="item-level2 col-xs-12">
+                                    {% if level2.children %}
+                                        <i class="icon-arrow pull-right"><svg version="1.1" width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 223.413 223.413" style="enable-background:new 0 0 223.413 223.413;" xml:space="preserve"><g><g><g><polygon style="fill:#010002;" points="57.179,223.413 51.224,217.276 159.925,111.71 51.224,6.127 57.179,0 172.189,111.71 "/></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></i>
+                                        <a href="javascript:void(0)" class="link-level2">{{ level2.name }}</a>
+                                        <div class="level3">
+                                            <ul class="clearfix">
+                                                {% for level3 in level2.children %}
+                                                    <li class="item-level3 col-xs-12">
+                                                        <a href="{{ level3.link }}" class="link-level3">{{ level3.name }}</a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    {% else %}
+                                        <a href="{{ level2.link }}" class="link-level2">{{ level2.name }}</a>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% else %}
+                <a href="{{ level1.link }}" class="link-level1">
+                    <span>{{ level1.name }}</span>
+                </a>
+            {% endif %}
+    	</li>
+    {% endfor %}
+</ul>

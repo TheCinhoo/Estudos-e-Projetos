@@ -1,0 +1,58 @@
+/**
+ * Product
+ */
+.product {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    text-align: center;
+    -webkit-transition: opacity 0.4s;
+         -o-transition: opacity 0.4s;
+            transition: opacity 0.4s;
+    margin-bottom: 30px;
+    
+    &:hover {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+
+    > a {
+        display: block;
+        position: relative;
+        text-decoration: none;
+    }
+
+    .product-image {
+        img {
+            margin: 0 auto;
+            width: 180px;
+        }
+
+        img[src*='loading'] {
+            width: 48px;
+        }
+    }
+
+    .product-name {
+        color: #333;
+        width: 100%;
+        
+        h3 {
+            font: 400 1em $primary-font;
+            text-transform: uppercase;
+            -ms-text-overflow: clip;
+                text-overflow: clip;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+
+    .product-price span {
+        background: #000;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        font-size: 0.8em;
+        padding: 3px 17px;
+    }
+    
+}
+

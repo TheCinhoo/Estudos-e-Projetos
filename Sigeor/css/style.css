@@ -3,7 +3,7 @@ body {
 }
 
 .wrapper {
-  margin-top: 170px;
+  margin-top: 40px;
   margin-bottom: 80px;
 }
 
@@ -60,10 +60,10 @@ footer {
 }
 
 .logo{
-  margin-top: 20%;
+  margin-top: 25px;
   margin-left: 20%;
   width: auto;
-  height: 40%;
+  height: 350px;;
 }
 
 .form-signin h2{
@@ -79,9 +79,9 @@ footer {
   color: #666;
 }
 
-.navbar{
+.navbar {
   padding: 15px;
-  color: #CCC;
+  background-color: #c8c8c8 !important ;
 }
 
 .navbar h5{
@@ -90,12 +90,10 @@ footer {
 }
 
 .navbar img{
-  max-width: 30px;
-  height: auto;
-}
-
-.espaco{
-  margin-top: 10%;
+  height: 28px;
+  width: auto;
+  padding: 0;
+  margin: auto;
 }
 
 th{
@@ -111,7 +109,7 @@ th{
 }
 
 .right{
-  margin-right: 0px;
+  margin-right: 0px !important;
   display: inline-block;;
 }
 .botcontainer{
@@ -120,9 +118,31 @@ th{
 }
 
 .ttlo{
-  margin-left: -30px !important;
+  margin-left: -15px !important;
  }
 
 .foc{
   background-color: #DDD;
+}
+
+.sebrae{
+  display: block;
+  margin: 20px auto;
+  height: 90px;
+  width: auto;
+}
+
+nav{
+  background-color: #C8C8C8;
+  border-bottom: solid 1px #FFF;
+}
+
+.corpo{
+  display: block;
+  margin-top: 50px;
+}
+
+.botoes{
+  margin-top: -50px;
+  padding: 0px;
 }

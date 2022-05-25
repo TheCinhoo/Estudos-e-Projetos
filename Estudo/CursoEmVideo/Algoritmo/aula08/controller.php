@@ -88,5 +88,3 @@
 
   $aproveitamento = aproveitamento($n1, $n2);
   echo "$aproveitamento <br><br>";
-
- ?>
