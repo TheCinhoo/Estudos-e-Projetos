@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: lightgrey;
+    color: rgb(26, 26, 26);
+}
+
+header {
+    background-color: #35b8b0;
+    height: 80px;
+    padding: 10px;
+}
+
+footer {
+    clear: both;
+    background-color: #35b8b0;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+.principal {
+    background-image: url('img/img.jpg');
+    background-size: 100%;
+    background-color: rgb(214, 35, 163);
+    min-height: 400px;
+    padding: 80px 0 0 0;
+    clear: both;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.finn {
+    height: 60px;
+}
+
+h1 {
+    color: antiquewhite;
+    text-align: center;
+    margin: 0 0 50px 0;
+    text-shadow: 3px 3px 3px #111;
+}
+
+p {
+    color: #FFF;
+}
+
+.efeito {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 80px 0;
+}
+
+.logo {
+    float: left;
+}
+
+.menu {
+    float: right;
+    padding: 20px;
+    margin: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    text-shadow: 1px 1px;
+    padding: 20px;
+}
+
+.menu a:hover {
+    background-color: chartreuse;
+}
