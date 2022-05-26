@@ -106,12 +106,12 @@ class CalcController {
 
     clearAll() {
 
-            this._operation = [];
-            this._lastNumber = '';
-            this._lastOperator = '';
-            this.setLastNumberToDisplay();
-        }
-        //teste
+        this._operation = [];
+        this._lastNumber = '';
+        this._lastOperator = '';
+        this.setLastNumberToDisplay();
+    }
+
     clearEntry() {
 
         this._operation.pop();
