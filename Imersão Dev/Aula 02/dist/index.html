@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Conversor de moedas - ID3</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 class="page-title">
+      Conversor de moedas
+    </h1>
+    <p class="page-subtitle">
+      Descubra os valores
+    </p>
+    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg"
+      class="page-logo" alt=""><br><br>
+    <label for="moeda">Insira o valor em Real</label><br>
+    <input type="number" id="valor" size="10" />
+
+    <select id="select">
+      <option value="dolar" selected>Dolar</option>
+      <option value="libra">Libra</option>
+      <option value="bitcoin">Bitcoin</option>
+    </select>
+    <br>
+    <button type="submit" onclick="Converter()">Converter</button>
+    <h2 id="valorConvertido"></h2>
+
+
+    <h1 class="page-title">
+      Conversor de Anos Luz em KM
+    </h1>
+    <label for="moeda">Insira o valor em Anos Luz</label><br>
+    <input type="number" id="km" size="10" /><br>
+    <button type="submit" onclick="ConverterKm()">Converter em Anos Luz</button>
+    <h2 id="valorConvertidoKm"></h2>
+
+
+    <h1 class="page-title">
+      Conversor de Temperatura
+    </h1>
+    <label for="moeda">Escolha</label><br>
+    <select id="temp1">
+      <option value="c1" selected>C</option>
+      <option value="f1">F</option>
+      <option value="k1">K</option>
+    </select>
+    <span>Para</span>
+    <select id="temp2">
+      <option value="c2" selected>C</option>
+      <option value="f2">F</option>
+      <option value="k2">K</option>
+    </select>
+
+    <h2 id="result"></h2>
+  </div>
+
+  <a href="https://alura.com.br/" target="_blank">
+    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+
+    <script src="script.js"></script>
+</body>
+
+</html>

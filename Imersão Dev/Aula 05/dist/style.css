@@ -1,0 +1,116 @@
+body {
+	font-family: 'Roboto Mono', monospace;
+	text-align: center;
+	background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTcikSyikfRWx5EPAQZP_fRgZyipunqCm7OQ&usqp=CAU');
+	background-color: #000000;
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+.container {
+	text-align: center;
+	padding: 20px;
+}
+
+.page-title {
+	text-align: left;
+	color: #ffffff;
+	margin: 0 0 5px;
+}
+
+.page-subtitle {
+	color: #ffffff;
+	margin-top: 5px;
+}
+
+.page-logo {
+	width: 200px;
+}
+
+.alura-logo {
+	width: 40px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.listaFilmes img {
+	display: inline-block;
+}
+#listaFilmes img {
+	margin: 1px;
+	max-height: 250px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+#listaFilmesimg:hover {
+	transform: scale(1.5);
+}
+
+.form-wrapper {
+	margin: 0 0 15px;
+}
+
+.form-wrapper input {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 5px;
+	padding: 10px 15px;
+}
+
+.form-wrapper button {
+	border: 0;
+	color: #ffffff;
+	background: #da1e26;
+	font-weight: bold;
+	padding: 15px 20px;
+	font-size: 16px;
+	border-radius: 4px;
+	margin-top: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.form-wrapper button:hover {
+	opacity: 0.8;
+}
+
+img:hover {
+	transition: transform 0.4s;
+	transform: scale(1.2);
+	overflow: hidden;
+}
+a {
+	display: inline-block;
+}
+.listaFilmes a button {
+	color: red;
+}
+img:hover + p {
+	transition: transform 0.4s;
+	transform: scale(1.8);
+	overflow: hidden;
+	margin: 30px;
+}
+
+p {
+	margin: 5px;
+	color: white;
+	font-family: 'Roboto Mono', monospace;
+}
+img:hover > a {
+	margin: 40px;
+}
+
+#botaoremover {
+	border: 200px;
+	color: #ffffff;
+	background: #da1e26;
+	font-weight: bold;
+	padding: 5px 25px;
+	font-size: 16px;
+	border-radius: 20px;
+	margin-top: 10px;
+	cursor: pointer;
+	transition: 0.3s;
+}
